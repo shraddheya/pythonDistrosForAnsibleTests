@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  python-ubuntu:
+    # docker push shraddheya/python-ubuntu:latest
+    image: shraddheya/python-ubuntu:latest
+    tty: true
+      context: ./
+      dockerfile: Dockerfile_ubuntu
+
+  python-centos:
+    # docker push shraddheya/python-centos:latest
+    image: shraddheya/python-centos:latest
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile_centos
+  
+  python-debian:
+    # docker push shraddheya/python-debian:latest
+    image: shraddheya/python-debian:latest
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile_debian
+
+  python-fedora:
+    # docker push shraddheya/python-fedora:latest
+    image: shraddheya/python-fedora:latest
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile_fedora
+    
